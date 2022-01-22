@@ -15,6 +15,7 @@
 		CDA73F9A278F81EC000F7899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA73F98278F81EC000F7899 /* LaunchScreen.storyboard */; };
 		CDA73FA2278F8231000F7899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA73FA1278F8231000F7899 /* LoginViewController.swift */; };
 		CDA73FA4278F8240000F7899 /* WelcomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA73FA3278F8240000F7899 /* WelcomViewController.swift */; };
+		CDD291F3279C8DEB0059B5EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD291F2279C8DEB0059B5EC /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CDA73F9B278F81EC000F7899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDA73FA1278F8231000F7899 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CDA73FA3278F8240000F7899 /* WelcomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomViewController.swift; sourceTree = "<group>"; };
+		CDD291F2279C8DEB0059B5EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				CDA73F96278F81EC000F7899 /* Assets.xcassets */,
 				CDA73F98278F81EC000F7899 /* LaunchScreen.storyboard */,
 				CDA73F9B278F81EC000F7899 /* Info.plist */,
+				CDD291F2279C8DEB0059B5EC /* User.swift */,
 			);
 			path = registration;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				CDA73FA2278F8231000F7899 /* LoginViewController.swift in Sources */,
 				CDA73F92278F81EB000F7899 /* ViewController.swift in Sources */,
+				CDD291F3279C8DEB0059B5EC /* User.swift in Sources */,
 				CDA73F8E278F81EB000F7899 /* AppDelegate.swift in Sources */,
 				CDA73F90278F81EB000F7899 /* SceneDelegate.swift in Sources */,
 				CDA73FA4278F8240000F7899 /* WelcomViewController.swift in Sources */,

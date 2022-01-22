@@ -9,16 +9,13 @@ import UIKit
 
 class WelcomViewController: UIViewController {
 
-    @IBOutlet weak var welcomView: UILabel!
-    @IBOutlet weak var logOutButton: UIButton!
-    
-    var user = ""
+    @IBOutlet weak var welcomeView: UILabel!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        logOutButton.layer.cornerRadius = 15
-        welcomView.text = "Welcome, \(user)"
+        welcomeView.text = "Welcome, \(user.person.fullName)🙌"
     }
     
 }

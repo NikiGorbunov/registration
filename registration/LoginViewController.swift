@@ -9,29 +9,29 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    
+    // MARK: IBOutlet
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var LogInButton: UIButton!
     
     
-    private let userName = "user"
-    private let password = "password"
+    private let human = User.getUser()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        LogInButton.layer.cornerRadius = 15
-    }
-    
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomViewController else { return }
-        welcomeVC.user = userName
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomViewController {
+                welcomeVC.user = human
+            }
+        }
     }
     
     @IBAction func LogInPressed() {
-        if userNameTextField.text != userName || passwordTextField.text != password {
+        if userNameTextField.text != human.login || passwordTextField.text != human.password {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password"
@@ -41,10 +41,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUser() {
-        showAlert(title: "Oops!", message: "Your name is \(userName)")
+        showAlert(title: "Oops!", message: "Your name is \(human.login)")
     }
     @IBAction func forgotPassword() {
-        showAlert(title: "Oops!", message: "Your password is \(password)")
+        showAlert(title: "Oops!", message: "Your password is \(human.password)")
     }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
